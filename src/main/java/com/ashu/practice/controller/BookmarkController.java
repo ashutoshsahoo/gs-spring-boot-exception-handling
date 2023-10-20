@@ -9,11 +9,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1/bookmarks")
+@RequestMapping(path = "/api/v1/bookmarks")
 @RequiredArgsConstructor
 public class BookmarkController {
     private final BookmarkService service;
-
 
     @PostMapping
     public ResponseEntity<BookmarkDTO> save(@Valid @RequestBody BookmarkDTO payload) {
